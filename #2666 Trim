@@ -1,0 +1,28 @@
+#include <iostream>
+#include <cstring>
+void Trim(char s[])
+{
+    int st=0;
+    while(s[st]==' ')
+    {
+        st++;
+    }
+    char nou[100];
+    int copie=0;
+    int dr=strlen(s)-1;
+    while(s[dr]==' ')dr--;
+    while(st<=dr)
+    {
+        nou[copie]=s[st];
+        copie++;
+        st++;
+    }
+    s[copie]='\0';
+    int c=copie;
+    int i=0;
+    while(i<c)
+    {
+        s[i]=nou[i];
+        i++;
+    }
+}
